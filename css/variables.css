@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&family=Patrick+Hand&display=swap');
+
+:root {
+  /* Shared Colors */
+  --white: #fff;
+  --black: #000;
+
+  /* Blue Theme */
+  --darkest-blue: #011f4b;
+  --dark-blue: #03396c;
+  --blue: #05395c;
+  --light-blue: #92dafe;
+  --lightest-blue: #e6efff;
+
+  /* ?? Theme */
+
+  /* Defaults */
+  --main-bg-color: var(--white);
+  --sidebar-bg-color: var(--darkest-blue);
+
+  --title-color: var(--lightest-blue);
+  --sidebar-text-color: var(--light-blue);
+  --sidebar-link-color: var(--light-blue);
+
+  --text-color: var(--darkest-blue);
+  --link-color: var(--darkest-blue);
+
+  --sidebar-max-width: 300px;
+  --sidebar-min-width: 300px;
+
+  /* Typography */
+  --font-size: 16px;
+}

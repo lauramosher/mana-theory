@@ -1,0 +1,206 @@
+html {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: var(--font-size);
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+a,
+a:visited {
+  color: var(--link-color);
+}
+
+a.button {
+  display: inline-block;
+  background-color: var(--link-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.posts .post {
+  max-width: 300px;
+}
+
+.post .overlay {
+  z-index: 2;
+}
+
+.posts .featured-post {
+  max-width: 300px;
+}
+
+@media (min-width: 990px) {
+  .comic-container > p {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: calc(600px + 1rem);
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+
+  .comic-container > p img {
+    -webkit-box-flex: 0;
+    -moz-box-flex:  0;
+    -webkit-flex:  0;
+    -ms-flex:  0;
+    flex:  0;
+
+    max-width: 300px;
+    border: 1px solid var(--dark-blue);
+  }
+
+  .comic-container.comic-feature-first > p img:first-child {
+    max-width: calc(600px + 1rem);
+    width: calc(600px + 1em);
+  }
+}
+
+/* Flex Container for 2 Column Layout */
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  align-items: stretch;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  body {
+    flex-direction: row;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  -webkit-box-flex: 0;
+  -moz-box-flex:  0;
+  -webkit-flex:  0;
+  -ms-flex:  0;
+  flex:  0;
+
+  min-width: var(--sidebar-min-width);
+
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+
+  padding: 2rem 1rem;
+
+  /* also a flex parent container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  .sidebar {
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: var(--sidebar-link-color);
+  text-decoration: none;
+}
+
+/* Sidebar Logo */
+.sidebar-logo img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Sidebar Title */
+.sidebar-title h1 {
+  color: var(--title-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Patrick Hand", serif;
+  font-size: 3.5rem;
+}
+
+.sidebar-title .pitch {
+  padding-right: 1.25rem;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+}
+.sidebar-nav li {
+  display: block;
+}
+.sidebar-nav li:hover,
+.sidebar-nav li:focus {
+  text-decoration: underline;
+}
+.sidebar-nav li.active {
+  font-weight: bold;
+}
+
+/* Hide Logo */
+.sidebar-collapse-logo .sidebar-logo {
+  display: none;
+  visibility: collapse;
+}
+
+/* Reverse Sidebar - only applicable in wide screens */
+@media (min-width: 700px) {
+  .layout-reverse .content {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+  }
+  .layout-reverse .sidebar {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+}
+
+/* Main Content Area */
+.content {
+  -webkit-box-flex: 1;
+  -moz-box-flex:  1;
+  -webkit-flex:  1;
+  -ms-flex:  1;
+  flex:  1;
+
+  padding: 2rem;
+}
+
+/* Main Content Scroll w/ Sticky Sidebar */
+.sidebar-sticky .content {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.sidebar-sticky .sidebar {
+  justify-content: space-between;
+}
